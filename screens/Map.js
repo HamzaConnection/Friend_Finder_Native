@@ -3,7 +3,6 @@ import { Text, View, TextInput, StyleSheet, TouchableOpacity, Alert } from 'reac
 import MapView from 'react-native-maps';
 
 
-
 export default class MyMap extends Component {
     
     constructor(props)
