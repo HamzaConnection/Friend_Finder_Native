@@ -9,7 +9,7 @@ export default class MyMap extends Component {
     {
         super(props);
         let parentProps = this.props.navigation.state.params; 
-        fetch('https://localhost:3000/register', {
+        fetch('https://localhost:3000/register/' + parentProps.distance, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -17,7 +17,6 @@ export default class MyMap extends Component {
             },
             body: JSON.stringify({
               userName : parentProps.userName,
-              distance : parentProps.distance,
               coordinates : navigator.geolocation.getCurrentPosition()
             })
           })
